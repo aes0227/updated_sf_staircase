@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Karla&family=Lobster+Two&family=Oxygen&family=Roboto&family=Special+Elite&family=Tinos&display=swap');
+
+/* normal carousel NON HOVER styles */
+.carousel {
+  position: relative;
+  /* overflow: hidden; */
+  z-index: 10001;
+  margin: -10px;
+  padding: 0px;
+}
+
+.carousel-content {
+  display: flex;
+  margin: 150px 0px 70px;
+  transition: 500ms;
+  margin-top: 0px;
+}
+
+@media(max-width: 1024px) {
+  .carousel-content {
+      margin: 100px 0 50px;
+  }
+}
+
+@media(max-width: 800px) {
+  .carousel-content {
+      margin: 70px 0 30px;
+  }
+}
+
+.carousel-content img {
+  height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+  object-fit: cover;
+}
+
+.carousel-content video {
+  min-width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  object-fit: fill;
+}
+
+.carousel .carousel-control-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 10%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel .carousel-control-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  cursor: pointer;
+  z-index: 1;
+}
+/* end of carousel code */
+
+body {background-color: rgb(255, 255, 255);}
+
+.top{
+  z-index: 10010;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 200px;
+  position: absolute;
+  top: 50%;
+  bottom: 0%;
+  left: 0%;
+  text-align:center;
+  width: 70%;
+  filter: drop-shadow(16px 16px 10px black);
+  color: rgb(0, 0, 0);
+  padding-bottom: 50px;
+}
+
+
+.top h1 {
+  font-size: 60px;
+  padding-bottom: 10px;
+}
+
+.top h2 {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.byline {
+  font-size: 20px;
+  font-style: italic;
+  font-family: 'Roboto',sans-serif;
+}
+
+.article {
+  padding-top: -10px;
+  padding-right: 50px;
+  padding-left: 200px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: Thin;
+  line-height: 1.6;
+  color: rgb(0, 0, 0);
+  padding-bottom: 20px;
+}
+
+.quote {
+  font-style: italic;
+  border-left: 5px solid #9fc3d5;
+  padding-left: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgb(0, 0, 0);
+  width: 40%;
+
+}
+
+.photos {
+  padding-bottom: 10px;
+  margin-left: -100px;
+}
+
+img{
+  width: auto;
+  height: 150px;
+  margin-right: 30px;   /* Horizontal Space */
+  margin-bottom: 20px;  /* Vertical Space */
+  border: 2px solid #9fc3d5;
+}
+
+/* 
+slanted effect for article text
+.article {
+  position: relative;
+  z-index: 1000000;
+  content: "";
+  right: -10%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -ms-transform: skewX(-10deg);
+  transform: skewX(-10deg);
+  
+} */
+
+.article h3 {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  font-size: 35px;
+}
+
+.body {
+  color: rgb(0, 0, 0);
+  width: 45%;
+  position:sticky;
+}
+
+/* Slideshow */
+
+* {box-sizing: border-box;}
+.mySlides1{display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text1 {
+  color: #000000;
+  font-size: 15px;
+  padding: -30px 14px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext1 {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  /* margin: 0 2px; */
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade1 {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* highlight */
+  
+.highlight {
+  text-decoration: underline;
+  text-decoration-color: rgb(242, 81, 91);
+  text-decoration-thickness: 3px;
+  position: relative;
+  display:inline-block;
+  }
+  
+  .image {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  /* Customize the size and position of the image as needed */
+  }
+  
+  .highlight:hover {
+  background-color: #f2515b;
+  }
+  
+  .highlight:hover .image {
+  display: block;
+  max-width: 10vw;
+  }
+  
+
+
+
+/* .video {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding-right: 10px;
+  padding-top: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  
+} */
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 50%;
+  min-height: 50%;
+  opacity:0.20;
+}
+
+.video-article {
+  padding-top: 0px;
+  display: flex;
+  position: relative;
+  
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.credits {
+  position: relative;
+  background-color: #9fc3d5;
+  padding: 5%;
+  width: 70%;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.credits h3 {
+  font-size: 30px;
+  padding-bottom: 0px;
+}
